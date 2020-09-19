@@ -16,5 +16,11 @@
 		"breed": "Angus",
 		"weight": 50000000000,
 		"location": "NSS"
+	},
+  "cow4": {
+		"name": "Steak",
+		"breed": "Angus",
+		"weight": 200,
+		"location": "NSS"
 	}
 }
