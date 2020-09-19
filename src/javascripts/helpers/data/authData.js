@@ -11,15 +11,10 @@ const checkLoginStatus = () => {
       const currentFarmer = userData.setCurrentFarmer(farmer);
       console.warn(currentFarmer);
       myNavbar.myNavbar();
-      $('#auth').addClass('hide');
-      $('#pasture').removeClass('hide');
-      $('#navbar-logout-button').removeClass('hide');
       pasture.buildCows();
     } else {
       auth.loginButton();
       $('#nav').html('');
-      $('#auth').removeClass('hide');
-      $('#pasture').addClass('hide');
     }
   });
 };
