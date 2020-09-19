@@ -1,7 +1,7 @@
 # Week 11 - Code Along
 
 ### The Agenda
-- Intro to Firebase
+- Intro to [Firebase](https://firebase.google.com/)
 - Firebase Authentication
 - JSON
 - Postman
