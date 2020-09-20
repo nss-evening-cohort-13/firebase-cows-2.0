@@ -13,7 +13,7 @@ const logoutEvent = () => {
   });
 };
 
-const myNavbar = () => {
+const myNavbar = (currentFarmer) => {
   $('#nav').html(
     `<nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">Horsey Cow Pasture</a>
@@ -23,19 +23,22 @@ const myNavbar = () => {
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-      <li class="nav-item mx-3">
-        <a class="nav-link" id="farmers-link" href="#"><i class="fas fa-hat-cowboy-side"></i> Farmers</a>
+      <li class="nav-item mx-3"  id="farmers-link">
+        <a class="nav-link" href="#"><i class="fas fa-hat-cowboy-side"></i> Farmers</a>
       </li>
-      <li class="nav-item mx-3">
-        <a class="nav-link" id="cows-link" href="#"><i class="far fa-cow"></i><i class="fas fa-horse"></i> Cows</a>
+      <li class="nav-item mx-3" id="cows-link">
+        <a class="nav-link" href="#"><i class="far fa-cow"></i><i class="fas fa-horse"></i> Cows</a>
       </li>
-      <li class="nav-item mx-3">
-        <a class="nav-link" id="add-cow-link" href="#"><i class="fas fa-plus-circle"></i> Add A Cow</a>
+      <li class="nav-item mx-3" id="add-cow-link">
+        <a class="nav-link" href="#"><i class="fas fa-plus-circle"></i> Add A Cow</a>
       </li>
     </ul>
 
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
+          <li class="user-info-nav">
+            Welcome, ${currentFarmer.name}!
+          </li>
+          <li class="nav-item">
             <button class="nav-link btn btn-danger p-2" id="navbar-logout-button">Logout</button>
           </li>
         </ul>
