@@ -1,9 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
-@import './components/index';
+@import './components';
+@import './views';
 
 body {
-  background-color: cornflowerblue;
+  background-color: rgb(6, 151, 66);
 }
 
 #app {
