@@ -8,8 +8,7 @@ const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((farmer) => {
     if (farmer) {
       const currentFarmer = userData.setCurrentFarmer(farmer);
-      console.warn(currentFarmer);
-      myNavbar.myNavbar();
+      myNavbar.myNavbar(currentFarmer);
     } else {
       auth.loginButton();
       $('#nav').html('');
