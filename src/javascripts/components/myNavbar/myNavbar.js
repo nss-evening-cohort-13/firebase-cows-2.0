@@ -5,7 +5,7 @@ const logoutEvent = () => {
   $('#navbar-logout-button').on('click', (e) => {
     e.preventDefault();
 
-    // NOTE FOR STUDENTS 
+    // NOTE FOR STUDENTS
     // Remove session storage if they log out in the same session and in case another user logs in, we want the API check to happen.
     window.sessionStorage.removeItem('ua');
     firebase.auth().signOut();
@@ -20,6 +20,18 @@ const myNavbar = () => {
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" id="farmers-link" href="#">Farmers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="cows-link" href="#">Cows</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="add-cow-link" href="#">Add A Cow</a>
+        </li>
+      </ul>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">

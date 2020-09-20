@@ -1,5 +1,6 @@
 import cowData from '../../helpers/data/cowData';
 
+// ADD COW COMPONENTS HERE
 const cowsOnDom = (obj) => {
   $('#app').html('');
   Object.keys(obj).forEach((item) => {
