@@ -16,27 +16,27 @@ const logoutEvent = () => {
 const myNavbar = () => {
   $('#nav').html(
     `<nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Pasture</a>
+      <a class="navbar-brand" href="#">Horsey Cow Pasture</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" id="farmers-link" href="#">Farmers</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="cows-link" href="#">Cows</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="add-cow-link" href="#">Add A Cow</a>
-        </li>
-      </ul>
-
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+      <li class="nav-item mx-3">
+        <a class="nav-link" id="farmers-link" href="#"><i class="fas fa-hat-cowboy-side"></i> Farmers</a>
+      </li>
+      <li class="nav-item mx-3">
+        <a class="nav-link" id="cows-link" href="#"><i class="far fa-cow"></i><i class="fas fa-horse"></i> Cows</a>
+      </li>
+      <li class="nav-item mx-3">
+        <a class="nav-link" id="add-cow-link" href="#"><i class="fas fa-plus-circle"></i> Add A Cow</a>
+      </li>
+    </ul>
+
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <button class="nav-link btn btn-danger" id="navbar-logout-button">Logout</button>
+            <button class="nav-link btn btn-danger p-2" id="navbar-logout-button">Logout</button>
           </li>
         </ul>
       </div>
