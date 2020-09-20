@@ -6,6 +6,16 @@ body {
   background-color: cornflowerblue;
 }
 
+#app {
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  margin-top: 50px;
+  width: 90%;
+}
+
+
 .hide {
   display: none;
 }
