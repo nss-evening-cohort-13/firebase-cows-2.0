@@ -3,12 +3,14 @@ import apiKeys from '../apiKeys.json';
 
 const baseUrl = apiKeys.firebaseKeys.databaseURL;
 
-const checkIfFarmerExists = (farmer) => {
+const checkIfFarmerExistsInFirebase = (farmer) => {
   axios
     .get(`${baseUrl}/farmers.json?orderBy="uid"&equalTo="${farmer.uid}"`)
     .then((resp) => {
       if (Object.values(resp.data).length === 0) {
         axios.post(`${baseUrl}/farmers.json`, farmer);
+      } else {
+        console.warn('User Already Exists');
       }
       // NOTE FOR STUDENTS
       // Set session storage after we know that user is in DB so that we do not hit the API again during this session. Limit hits to the API.
@@ -30,16 +32,9 @@ const setCurrentFarmer = (farmerObj) => {
   // If the user is logged in and this is set, we have already checked the API, so if they refresh, we know that they already exist.
   const loggedIn = window.sessionStorage.getItem('ua');
   if (!loggedIn) {
-    checkIfFarmerExists(farmer);
+    checkIfFarmerExistsInFirebase(farmer);
   }
   return farmer;
 };
 
-const getAllFarmers = () => new Promise((resolve, reject) => {
-  axios.get(`${baseUrl}/farmers.json`).then((response) => {
-    const farmers = Object.values(response.data);
-    resolve(farmers);
-  }).catch((error) => reject(error));
-});
-
-export default { setCurrentFarmer, getAllFarmers };
+export default { setCurrentFarmer };
