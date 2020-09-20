@@ -7,8 +7,14 @@ const signMeIn = () => {
 };
 
 const loginButton = () => {
-  const domString = '<button id="google-auth" class="btn btn-danger">GOOGLE LOGIN</button>';
-  $('#auth').html(domString);
+  const domString = `<div id="auth">
+                      <h4>Welcome to Pasture</h4>
+                      <button id="google-auth" class="btn btn-primary btn-lg">
+                        <i class="fab fa-google"></i></i>oogle Login
+                      </button>
+                    </div>`;
+
+  $('#app').html(domString);
   $('#google-auth').on('click', signMeIn);
 };
 

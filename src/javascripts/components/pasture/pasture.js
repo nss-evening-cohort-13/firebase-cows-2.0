@@ -1,9 +1,9 @@
 import cowData from '../../helpers/data/cowData';
 
 const cowsOnDom = (obj) => {
-  $('#pasture').html('');
+  $('#app').html('');
   Object.keys(obj).forEach((item) => {
-    $('#pasture').append(`<h3>${obj[item].name}</h3>`);
+    $('#app').append(`<div id="pasture"><h3>${obj[item].name}</h3></div>`);
   });
 };
 
