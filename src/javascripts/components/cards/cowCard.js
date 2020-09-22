@@ -1,4 +1,3 @@
-// TODO: STUDENTS
 const cowMaker = (cowObject) => {
   const domString = `<div class="card m-2" style="width: 18rem;" id="${cowObject.id}">
                       <div class="card-body">
