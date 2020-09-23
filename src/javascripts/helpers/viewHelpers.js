@@ -1,5 +1,6 @@
 import farmersView from '../components/views/farmersView';
 import cowsView from '../components/views/cowsView';
+import addCowsView from '../components/views/addCowView';
 
 const viewHelper = (id) => {
   $('#app').html('');
@@ -9,12 +10,16 @@ const viewHelper = (id) => {
       return cowsView.cowsView();
     case 'farmers-link':
       return farmersView.farmersView();
+    case 'add-cow-link':
+      return addCowsView.addCowView();
     default:
       return console.warn('nothing clicked');
   }
 };
 
-const viewListener = () => {
+const viewListener = (view) => {
+  viewHelper(view);
+
   $('body').on('click', 'li.nav-item', (e) => {
     viewHelper(e.currentTarget.id);
   });
