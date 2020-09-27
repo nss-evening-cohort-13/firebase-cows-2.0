@@ -18,3 +18,4 @@ By the end of this series of 6 lessons, students will be able to:
   - Read/GET items from the API and render them to the DOM using Bootstrap cards
 
 ## Resulting Product
+<a href="https://www.loom.com/share/e28fb9f79197407cbcfa5c753b6c2b26"> <p>Horsey Cow Pasture - Watch Video</p> <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/e28fb9f79197407cbcfa5c753b6c2b26-with-play.gif"> </a>
