@@ -2,6 +2,7 @@ import farmersView from '../components/views/farmersView';
 import cowsView from '../components/views/cowsView';
 import addCowsView from '../components/views/addCowView';
 import updateCowsView from '../components/views/updateCowView';
+import singleFarmerView from '../components/views/singleFarmerView';
 
 const viewHelper = (id, arg) => {
   $('#app').html('');
@@ -15,6 +16,8 @@ const viewHelper = (id, arg) => {
       return addCowsView.addCowView();
     case 'update-cow-link':
       return updateCowsView.updateCowView(arg);
+    case 'single-farmer':
+      return singleFarmerView.singleFarmerView(arg);
     default:
       return console.warn('nothing clicked');
   }
@@ -30,6 +33,11 @@ const viewListener = (view) => {
   $('body').on('click', '.update-cow', (e) => {
     const cowFirebaseKey = e.currentTarget.id;
     viewHelper('update-cow-link', cowFirebaseKey);
+  });
+
+  $('body').on('click', '.card.farmer .see-cows', (e) => {
+    const farmerUid = e.currentTarget.id;
+    viewHelper('single-farmer', farmerUid);
   });
 };
 

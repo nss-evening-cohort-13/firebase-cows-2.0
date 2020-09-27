@@ -1,8 +1,8 @@
-import cowData from '../../helpers/data/cowData';
+import mergedData from '../../helpers/data/mergedData';
 import card from '../cards/cowCard';
 
 const cowsView = () => {
-  cowData.getAllCows()
+  mergedData.getDataForCowsView()
     .then((response) => {
       if (response.length) {
         response.forEach((cow) => {
